@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "lastVerifiedAt": "2026-08-18T09:00:00+08:00",
+  "publicationMode": "reviewed",
+  "policies": [
+    {
+      "id": "hk-minimum-wage-2026",
+      "jurisdiction": "中国香港",
+      "regionCode": "HK",
+      "category": "最低工资",
+      "topic": "法定最低工资与工时记录门槛",
+      "title": "香港法定最低工资于 2026 年 5 月再次上调",
+      "effectiveDate": "2026-05-01",
+      "oldRule": "2025 年 5 月 1 日起，法定最低工资为 HK$42.1/小时；雇主记录总工时要求的月薪门槛为 HK$17,200。",
+      "newRule": "2026 年 5 月 1 日起，法定最低工资为 HK$43.1/小时；相应的月薪记录门槛提高至 HK$17,600。",
+      "deltaSummary": "时薪增加 HK$1（约 +2.38%），工时记录月薪门槛增加 HK$400。",
+      "impactLevel": "high",
+      "hrActions": [
+        "更新 2026 年 5 月 1 日及之后工时的薪资计算规则。",
+        "复核月薪接近最低工资线的员工，并保留实际工时记录。",
+        "将 HK$17,600 仅作为记录工时门槛，不要误当作月度最低工资。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "Statutory Minimum Wage",
+            "authority": "香港特别行政区政府劳工处",
+            "url": "https://www.labour.gov.hk/eng/news/mwo.htm",
+            "excerpt": "The SMW rate is raised to $43.1 per hour with effect from 1 May 2026."
+          }
+        ]
+      }
+    },
+    {
+      "id": "tw-minimum-wage-2026",
+      "jurisdiction": "中国台湾",
+      "regionCode": "TW",
+      "category": "最低工资",
+      "topic": "月最低工资与小时最低工资",
+      "title": "台湾 2026 年最低工资调升至月薪 NT$29,500",
+      "effectiveDate": "2026-01-01",
+      "oldRule": "2025 年月最低工资为 NT$28,590，小时最低工资为 NT$190。",
+      "newRule": "2026 年月最低工资为 NT$29,500，小时最低工资为 NT$196。",
+      "deltaSummary": "月薪增加 NT$910（+3.18%）；时薪增加 NT$6。",
+      "impactLevel": "high",
+      "hrActions": [
+        "检查固定月薪低于 NT$29,500 的合同与排班。",
+        "同步调整时薪人员、加班费及与最低工资联动的薪资参数。",
+        "复核劳健保与退休金申报基数是否需要随薪资调整。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "Adjustment of minimum wage",
+            "authority": "台湾劳动主管部门",
+            "url": "https://english.mol.gov.tw/21004/21015/21016/21033/21231/",
+            "excerpt": "Minimum wage had been NT$196 per hour and NT$29,500 per month starting from January 1, 2026."
+          }
+        ]
+      }
+    },
+    {
+      "id": "kr-minimum-wage-2026",
+      "jurisdiction": "韩国",
+      "regionCode": "KR",
+      "category": "最低工资",
+      "topic": "全国最低时薪与 209 小时月度换算额",
+      "title": "韩国 2026 年最低时薪确定为 10,320 韩元",
+      "effectiveDate": "2026-01-01",
+      "oldRule": "2025 年最低时薪为 10,030 韩元；按 209 小时换算的月薪为 2,096,270 韩元。",
+      "newRule": "2026 年最低时薪为 10,320 韩元；按 209 小时换算的月薪为 2,156,880 韩元。",
+      "deltaSummary": "时薪增加 290 韩元（+2.9%）；209 小时口径月额增加 60,610 韩元。",
+      "impactLevel": "high",
+      "hrActions": [
+        "将 2026 年工资系统的最低时薪参数更新为 10,320 韩元。",
+        "复核含固定加班、周休津贴的薪资构成，避免只比较名义月薪。",
+        "同步检查本地员工与外籍员工的适用薪资底线。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "2026 Minimum Wage",
+            "authority": "韩国最低工资委员会",
+            "url": "https://minimumwage.go.kr/english/main.do",
+            "excerpt": "Hourly 10,320won (up 290 won compared to the previous 2025 year)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "jp-regional-minimum-wage-2025",
+      "jurisdiction": "日本",
+      "regionCode": "JP",
+      "category": "最低工资",
+      "topic": "都道府县地区最低工资",
+      "title": "日本地区最低工资全国加权平均升至 1,121 日元",
+      "effectiveDate": "2025-10-01",
+      "oldRule": "2024 年度地区最低工资全国加权平均为 1,055 日元/小时，各地适用额与生效日不同。",
+      "newRule": "2025 年度全国加权平均为 1,121 日元/小时，47 个都道府县均超过 1,000 日元；具体金额按工作地查询。",
+      "deltaSummary": "全国加权平均增加 66 日元；不能用全国平均替代员工工作地的法定最低工资。",
+      "impactLevel": "high",
+      "hrActions": [
+        "按员工实际工作地匹配都道府县最低工资，而非统一使用全国平均。",
+        "记录各都道府县具体生效日期，分批更新薪资系统。",
+        "同时检查适用的特定产业最低工资是否更高。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "地域別最低賃金の全国一覧",
+            "authority": "日本厚生劳动省",
+            "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/index.html",
+            "excerpt": "令和７年度全国加重平均時間額：1,121円（前年度比6.26％上昇）"
+          }
+        ]
+      }
+    },
+    {
+      "id": "au-super-guarantee-2025",
+      "jurisdiction": "澳大利亚",
+      "regionCode": "AU",
+      "category": "养老金",
+      "topic": "Super Guarantee 法定缴费比例",
+      "title": "澳大利亚法定养老金比例已升至 12%",
+      "effectiveDate": "2025-07-01",
+      "oldRule": "2024/25 财年，Super Guarantee（SG）最低比例为普通工时收入的 11.5%。",
+      "newRule": "自 2025 年 7 月 1 日起，SG 最低比例为普通工时收入的 12%；2026 年仍沿用该比例。",
+      "deltaSummary": "比例上调 0.5 个百分点；原稿所写“2026 年 7 月升至 11.5%”不准确。",
+      "impactLevel": "high",
+      "hrActions": [
+        "确认 2025 年 7 月 1 日及之后支付的工资已按 12% 计算 SG。",
+        "检查 total package 与 base + super 两类合同的成本影响。",
+        "复核普通工时收入（OTE）口径和季度付款到达基金的时间。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "How much super to pay",
+            "authority": "Australian Taxation Office",
+            "url": "https://www.ato.gov.au/businesses-and-organisations/super-for-employers/paying-super-contributions/how-much-super-to-pay",
+            "excerpt": "From 1 July 2025 this is 12% of their ordinary time earnings (OTE) for the quarter."
+          }
+        ]
+      }
+    },
+    {
+      "id": "au-skills-in-demand-visa-2024",
+      "jurisdiction": "澳大利亚",
+      "regionCode": "AU",
+      "category": "工作签证",
+      "topic": "Subclass 482 雇主担保签证",
+      "title": "Skills in Demand 签证实际于 2024 年取代 TSS",
+      "effectiveDate": "2024-12-07",
+      "oldRule": "Temporary Skill Shortage（TSS，subclass 482）是主要的临时技术雇主担保签证。",
+      "newRule": "Skills in Demand（SID，subclass 482）自 2024 年 12 月 7 日起取代 TSS；实施前已提交的申请按当时规则处理。",
+      "deltaSummary": "变更发生在 2024 年 12 月，而不是原稿所写的 2026 年 7 月。",
+      "impactLevel": "high",
+      "hrActions": [
+        "按提交日期区分 TSS 过渡案件与 SID 新申请。",
+        "使用最新职业清单和 SID 分流要求复核提名岗位。",
+        "不要将后续阈值调整误写成 SID 制度的首次生效日。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "Temporary Skill Shortage visa (repealed)",
+            "authority": "Australian Department of Home Affairs",
+            "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/repealed-visas/temporary-skill-shortage-medium-term-visa-subclass-482",
+            "excerpt": "On December 7 2024, the Skills in Demand (SID) visa replaced the Temporary Skills Shortage (TSS) visa."
+          }
+        ]
+      }
+    },
+    {
+      "id": "hk-mpf-offsetting-2025",
+      "jurisdiction": "中国香港",
+      "regionCode": "HK",
+      "category": "离职成本",
+      "topic": "MPF 与遣散费/长期服务金抵销安排",
+      "title": "香港取消强积金雇主强制供款抵销安排",
+      "effectiveDate": "2025-05-01",
+      "oldRule": "符合条件时，雇主可用雇主供款产生的强积金权益抵销遣散费或长期服务金。",
+      "newRule": "2025 年 5 月 1 日起，雇主强制供款不能抵销员工过渡日之后服务期对应的遣散费或长期服务金；过渡前服务期有单独规则。",
+      "deltaSummary": "雇主需为过渡日后的服务期单独计提相关离职成本，且改革不追溯既往。",
+      "impactLevel": "high",
+      "hrActions": [
+        "在员工主数据中保存 2025 年 5 月 1 日过渡日及前后服务期。",
+        "重做遣散费与长期服务金计提模型，区分强制和自愿供款。",
+        "符合条件时在法定期限内申请政府补贴计划。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "MPF Employer FAQ",
+            "authority": "香港强制性公积金计划管理局",
+            "url": "https://www.mpfa.org.hk/en/info-centre/faq/employer/mpf-employer",
+            "excerpt": "The abolition has no retrospective effect."
+          }
+        ]
+      }
+    },
+    {
+      "id": "jp-childcare-flexible-work-2025",
+      "jurisdiction": "日本",
+      "regionCode": "JP",
+      "category": "育儿与休假",
+      "topic": "育儿期灵活工作措施",
+      "title": "日本雇主须为育儿员工提供两项以上灵活工作措施",
+      "effectiveDate": "2025-10-01",
+      "oldRule": "旧制度没有要求雇主从法定选项中为 3 岁至入学前儿童的照护者配置两项以上灵活工作措施。",
+      "newRule": "雇主须从五类法定措施中选择至少两项，为抚养 3 岁至小学入学前儿童的员工提供选择，并履行个别告知与意向确认。",
+      "deltaSummary": "从一般性支持升级为明确的制度配置义务，需同步修改规则、流程与员工沟通。",
+      "impactLevel": "medium",
+      "hrActions": [
+        "从法定五类措施中确定至少两项，并征求过半数工会或员工代表意见。",
+        "更新就业规则、申请表单和 HRIS 休假/工时配置。",
+        "建立员工达到规定年龄前的个别告知与意向确认流程。"
+      ],
+      "verification": {
+        "status": "verified",
+        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "method": "official-source-and-exact-evidence",
+        "sources": [
+          {
+            "title": "育児・介護休業法について",
+            "authority": "日本厚生劳动省",
+            "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000130583.html",
+            "excerpt": "事業主は、選択して講ずべき措置の中から、２つ以上の措置を選択して講ずる必要があります。"
+          }
+        ]
+      }
+    }
+  ]
+}

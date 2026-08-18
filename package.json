@@ -1,0 +1,17 @@
+{
+  "name": "policy-delta-apac",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "轻量级亚太 HR 政策对比与官方来源核验网站",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "sync": "node scripts/sync-policies.mjs",
+    "approve": "node scripts/approve-policy.mjs",
+    "validate": "node scripts/validate-data.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

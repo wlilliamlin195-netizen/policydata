@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "hk-minimum-wage",
+      "policyId": "hk-minimum-wage-2026",
+      "enabled": true,
+      "jurisdiction": "中国香港",
+      "category": "最低工资",
+      "authority": "香港特别行政区政府劳工处",
+      "officialDomains": ["labour.gov.hk", "www.labour.gov.hk"],
+      "urls": ["https://www.labour.gov.hk/eng/news/mwo.htm"],
+      "watchFor": "法定最低工资时薪、工时记录月薪门槛、生效日期"
+    },
+    {
+      "id": "tw-minimum-wage",
+      "policyId": "tw-minimum-wage-2026",
+      "enabled": true,
+      "jurisdiction": "中国台湾",
+      "category": "最低工资",
+      "authority": "台湾劳动主管部门",
+      "officialDomains": ["mol.gov.tw", "www.mol.gov.tw", "english.mol.gov.tw"],
+      "urls": ["https://english.mol.gov.tw/21004/21015/21016/21033/21231/"],
+      "watchFor": "月最低工资、小时最低工资与生效日期"
+    },
+    {
+      "id": "kr-minimum-wage",
+      "policyId": "kr-minimum-wage-2026",
+      "enabled": true,
+      "jurisdiction": "韩国",
+      "category": "最低工资",
+      "authority": "韩国最低工资委员会",
+      "officialDomains": ["minimumwage.go.kr", "www.minimumwage.go.kr"],
+      "urls": ["https://minimumwage.go.kr/english/main.do"],
+      "watchFor": "适用年度、最低时薪、8 小时日薪与 209 小时月额"
+    },
+    {
+      "id": "jp-regional-minimum-wage",
+      "policyId": "jp-regional-minimum-wage-2025",
+      "enabled": true,
+      "jurisdiction": "日本",
+      "category": "最低工资",
+      "authority": "日本厚生劳动省",
+      "officialDomains": ["mhlw.go.jp", "www.mhlw.go.jp"],
+      "urls": ["https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/index.html"],
+      "watchFor": "年度、都道府县最低工资、全国加权平均与具体生效日期"
+    },
+    {
+      "id": "au-super-guarantee",
+      "policyId": "au-super-guarantee-2025",
+      "enabled": true,
+      "jurisdiction": "澳大利亚",
+      "category": "养老金",
+      "authority": "Australian Taxation Office",
+      "officialDomains": ["ato.gov.au", "www.ato.gov.au"],
+      "urls": ["https://www.ato.gov.au/businesses-and-organisations/super-for-employers/paying-super-contributions/how-much-super-to-pay"],
+      "watchFor": "Super Guarantee 比例、普通工时收入口径与生效日期"
+    },
+    {
+      "id": "au-skills-in-demand",
+      "policyId": "au-skills-in-demand-visa-2024",
+      "enabled": true,
+      "jurisdiction": "澳大利亚",
+      "category": "工作签证",
+      "authority": "Australian Department of Home Affairs",
+      "officialDomains": ["immi.homeaffairs.gov.au", "homeaffairs.gov.au"],
+      "urls": ["https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/repealed-visas/temporary-skill-shortage-medium-term-visa-subclass-482"],
+      "watchFor": "SID/TSS 制度、生效日期、过渡安排与申请条件"
+    },
+    {
+      "id": "hk-mpf-offsetting",
+      "policyId": "hk-mpf-offsetting-2025",
+      "enabled": true,
+      "jurisdiction": "中国香港",
+      "category": "离职成本",
+      "authority": "香港强制性公积金计划管理局",
+      "officialDomains": ["mpfa.org.hk", "www.mpfa.org.hk"],
+      "urls": ["https://www.mpfa.org.hk/en/info-centre/faq/employer/mpf-employer"],
+      "watchFor": "MPF 抵销遣散费/长期服务金的过渡日、前后服务期和补贴申请"
+    },
+    {
+      "id": "jp-childcare-flexible-work",
+      "policyId": "jp-childcare-flexible-work-2025",
+      "enabled": true,
+      "jurisdiction": "日本",
+      "category": "育儿与休假",
+      "authority": "日本厚生劳动省",
+      "officialDomains": ["mhlw.go.jp", "www.mhlw.go.jp"],
+      "urls": ["https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000130583.html"],
+      "watchFor": "育儿期灵活工作措施、雇主义务、员工年龄范围和生效日期"
+    }
+  ]
+}

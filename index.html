@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="亚太人力资源政策新旧对比与官方来源核验">
+  <title>Policy Delta｜亚太 HR 政策对比</title>
+  <link rel="stylesheet" href="./styles.css?v=1.0.1">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Policy Delta 首页">
+      <span class="brand-mark" aria-hidden="true">Δ</span>
+      <span>
+        <strong>Policy Delta</strong>
+        <small>APAC HR POLICY WATCH</small>
+      </span>
+    </a>
+    <div class="header-status" aria-live="polite">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span id="header-status-text">正在读取核验状态</span>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">官方原文为准 · AI 辅助比对 · 证据可追溯</p>
+        <h1 id="page-title">先看变化，<br><span>再决定行动。</span></h1>
+        <p class="hero-intro">将新规与旧规并排呈现，帮助跨境 HR 快速识别成本、薪资、签证与用工流程中的真实变化。</p>
+      </div>
+      <aside class="trust-card" aria-label="更新机制摘要">
+        <div class="trust-card-heading">
+          <span class="shield-icon" aria-hidden="true">✓</span>
+          <div>
+            <strong>核验优先</strong>
+            <span>未通过检查的 AI 结果不会进入正式政策库</span>
+          </div>
+        </div>
+        <ol>
+          <li><span>01</span>定时抓取白名单内的政府官网</li>
+          <li><span>02</span>AI 只做结构化提取与差异识别</li>
+          <li><span>03</span>原文引证、日期和域名自动复核</li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="content-shell" aria-label="政策数据库">
+      <div class="view-tabs" role="tablist" aria-label="页面视图">
+        <button class="view-tab is-active" id="comparison-tab" type="button" role="tab" aria-selected="true" aria-controls="comparison-view" data-view="comparison">政策对比</button>
+        <button class="view-tab" id="method-tab" type="button" role="tab" aria-selected="false" aria-controls="method-view" data-view="method">更新与核验</button>
+      </div>
+
+      <section id="comparison-view" role="tabpanel" aria-labelledby="comparison-tab">
+        <div class="metrics" aria-label="政策概览">
+          <article>
+            <span>已核验政策</span>
+            <strong id="metric-total">—</strong>
+          </article>
+          <article>
+            <span>高影响变更</span>
+            <strong id="metric-high">—</strong>
+          </article>
+          <article>
+            <span>覆盖法域</span>
+            <strong id="metric-regions">—</strong>
+          </article>
+          <article class="metric-wide">
+            <span>数据库最近核验</span>
+            <strong id="metric-verified">—</strong>
+          </article>
+        </div>
+
+        <form class="filters" id="filter-form" role="search">
+          <label class="search-field">
+            <span class="sr-only">搜索政策</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" placeholder="搜索政策、数值或 HR 动作">
+          </label>
+          <label>
+            <span class="sr-only">法域</span>
+            <select id="region-filter">
+              <option value="ALL">全部法域</option>
+            </select>
+          </label>
+          <label>
+            <span class="sr-only">政策类型</span>
+            <select id="category-filter">
+              <option value="ALL">全部类型</option>
+            </select>
+          </label>
+          <label class="verified-toggle">
+            <input id="verified-filter" type="checkbox" checked>
+            <span>仅看已核验</span>
+          </label>
+          <button id="reset-filters" class="text-button" type="reset">重置</button>
+        </form>
+
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">POLICY CHANGES</p>
+            <h2>新旧政策差异</h2>
+          </div>
+          <p id="results-count" aria-live="polite">正在加载…</p>
+        </div>
+
+        <div id="policy-list" class="policy-list" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <strong>没有找到符合条件的政策</strong>
+          <p>尝试减少筛选条件或更换搜索词。</p>
+        </div>
+      </section>
+
+      <section id="method-view" class="method-view" role="tabpanel" aria-labelledby="method-tab" hidden>
+        <header>
+          <p class="eyebrow">FAIL-CLOSED WORKFLOW</p>
+          <h2>自动发现，谨慎发布</h2>
+          <p>时效性来自定时监测；准确性来自官方白名单、逐字证据和失败即停止的发布门槛。</p>
+        </header>
+        <div class="method-grid">
+          <article>
+            <span>1</span>
+            <h3>官方源监测</h3>
+            <p>每 12 小时抓取配置好的政府或法定机构页面，通过内容哈希识别变化。</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>AI 结构化提取</h3>
+            <p>服务端调用 Responses API，将新旧规则、日期、影响和证据提取为固定 JSON 结构。</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>确定性校验</h3>
+            <p>检查来源域名、HTTPS、日期格式，并确认每条证据逐字存在于抓取到的官方原文中。</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>独立复核</h3>
+            <p>第二次 AI 调用以审计者身份复核候选变更；存在歧义时自动进入人工审核队列。</p>
+          </article>
+        </div>
+        <div class="governance-note">
+          <strong>发布原则</strong>
+          <p>默认不让 AI 直接改写已发布政策。候选项审核通过后才进入正式数据；如启用无人值守发布，也只放行满足全部硬性校验的变更。</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>本网站用于企业 HR 合规信息整理，不构成法律意见。任何决策请回到所列官方原文并咨询当地专业人士。</p>
+    <p>Policy Delta · 数据由官方来源驱动</p>
+  </footer>
+
+  <noscript>请启用 JavaScript 以加载政策对比数据。</noscript>
+  <script type="module" src="./app.js?v=1.0.1"></script>
+</body>
+</html>
