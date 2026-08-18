@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+  "sources": {
+    "hk-minimum-wage": {
+      "contentHash": "35b01c6c7a9e9a8c9babfdd75d788881e1aebcb07eaf0f56f65a755f5fcad4c6",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "tw-minimum-wage": {
+      "contentHash": "413591ee2fe0b45080c7811299b92b867889a715fdd20acc5fc11389d2f7e9a7",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "kr-minimum-wage": {
+      "contentHash": "9cec7ec0428159120083268d185f49c312a454bb7fce1309ec5836ae6ff3b512",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "jp-regional-minimum-wage": {
+      "contentHash": "97c08fe5470fe30e39fbe479c5d29f0045ddf226f1c1b6244703c3f5621347f5",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "au-super-guarantee": {
+      "contentHash": "1430d94b40673b1e92cd85cf31c6f29d20d4ae7459c7ab8fbb5d8c601484f920",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "au-skills-in-demand": {
+      "contentHash": "9e5aedb9f9317b6208ac0ca7db49cc459e8aa53e04d447afca8f10b6a8816586",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "hk-mpf-offsetting": {
+      "contentHash": "42c2666cfcb96e78df0f3050536ca4ca32b96d454dd9d478b66d1e42a5d46a48",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    },
+    "jp-childcare-flexible-work": {
+      "contentHash": "90f9f74448e10effef29d3f8abce703c089084b0770831adde2b372d10154e4c",
+      "lastCheckedAt": "2026-08-18T09:55:04.874Z",
+      "status": "baseline-created"
+    }
+  }
+}
