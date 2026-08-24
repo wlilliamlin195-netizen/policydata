@@ -237,6 +237,8 @@ h1 span { color: var(--coral); }
 .metrics span { display: block; margin-bottom: .35rem; color: var(--ink-soft); font-size: .75rem; }
 .metrics strong { font-family: Georgia, serif; font-size: 1.35rem; font-weight: 600; }
 .metric-wide strong { font-family: inherit; font-size: .94rem; }
+.metric-dates { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.metric-dates div + div { padding-left: 1rem; border-left: 1px solid var(--line); }
 
 .filters {
   margin: 1.2rem 0 3rem;
@@ -401,6 +403,8 @@ footer p { margin: 0; }
   .hero-intro { font-size: .94rem; }
   .metrics { grid-template-columns: 1fr 1fr; }
   .metrics article { padding: 1rem; }
+  .metric-dates { grid-template-columns: 1fr; gap: .75rem; }
+  .metric-dates div + div { padding: .75rem 0 0; border-left: 0; border-top: 1px solid var(--line); }
   .filters { grid-template-columns: 1fr; margin-bottom: 2.4rem; }
   .search-field { grid-column: auto; }
   .verified-toggle { padding-left: .2rem; }

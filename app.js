@@ -5,7 +5,14 @@ const state = {
   region: "ALL",
   category: "ALL",
   verifiedOnly: true,
+  lastVerifiedAt: null,
+  lastCheckedAt: null,
 };
+
+const monitorStateUrls = [
+  "https://raw.githubusercontent.com/wlilliamlin195-netizen/policydata/main/data/monitor-state.json",
+  "./data/monitor-state.json",
+];
 
 const ui = {
   list: document.querySelector("#policy-list"),
@@ -33,8 +40,9 @@ function formatDate(value) {
 }
 
 function formatTimestamp(value) {
+  if (!value) return "暂无记录";
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "核验时间未知";
+  if (Number.isNaN(date.getTime())) return "时间未知";
   return new Intl.DateTimeFormat("zh-CN", {
     year: "numeric",
     month: "2-digit",
@@ -169,13 +177,35 @@ function renderPolicies() {
   ui.resultsCount.textContent = `显示 ${state.filtered.length} / ${state.policies.length} 项`;
 }
 
-function renderMetrics(database) {
+function renderMetrics() {
   const verified = state.policies.filter((item) => item.verification.status === "verified");
   document.querySelector("#metric-total").textContent = String(verified.length);
   document.querySelector("#metric-high").textContent = String(verified.filter((item) => item.impactLevel === "high").length);
   document.querySelector("#metric-regions").textContent = String(new Set(verified.map((item) => item.jurisdiction)).size);
-  document.querySelector("#metric-verified").textContent = formatTimestamp(database.lastVerifiedAt);
-  ui.status.textContent = `已核验 · ${formatTimestamp(database.lastVerifiedAt)}`;
+  document.querySelector("#metric-verified").textContent = formatTimestamp(state.lastVerifiedAt);
+  document.querySelector("#metric-monitored").textContent = formatTimestamp(state.lastCheckedAt);
+  ui.status.textContent = state.lastCheckedAt
+    ? `官网检查 · ${formatTimestamp(state.lastCheckedAt)}`
+    : `内容核验 · ${formatTimestamp(state.lastVerifiedAt)}`;
+}
+
+async function loadMonitorState() {
+  for (const url of monitorStateUrls) {
+    try {
+      const separator = url.includes("?") ? "&" : "?";
+      const response = await fetch(`${url}${separator}t=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const monitorState = await response.json();
+      if (!monitorState.lastCheckedAt) throw new Error("缺少 lastCheckedAt");
+      state.lastCheckedAt = monitorState.lastCheckedAt;
+      renderMetrics();
+      return;
+    } catch (error) {
+      console.warn(`无法从 ${url} 读取监测状态`, error);
+    }
+  }
+  state.lastCheckedAt = null;
+  renderMetrics();
 }
 
 function bindEvents() {
@@ -219,6 +249,7 @@ async function loadPolicies() {
     const response = await fetch("./data/policies.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const database = await response.json();
+    state.lastVerifiedAt = database.lastVerifiedAt;
     state.policies = database.policies
       .slice()
       .sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate));
@@ -228,7 +259,7 @@ async function loadPolicies() {
     populateSelect(ui.category, [...new Set(state.policies.map((item) => item.category))].sort((a, b) => a.localeCompare(b, "zh-CN")));
     ui.region.value = [...ui.region.options].some((option) => option.value === state.region) ? state.region : "ALL";
     ui.category.value = [...ui.category.options].some((option) => option.value === state.category) ? state.category : "ALL";
-    renderMetrics(database);
+    renderMetrics();
     applyFilters();
   } catch (error) {
     ui.status.textContent = "数据加载失败";
@@ -242,6 +273,10 @@ async function loadPolicies() {
 
 bindEvents();
 loadPolicies();
+loadMonitorState();
 
 // 长时间打开页面时自动读取最新的已发布数据。
-window.setInterval(loadPolicies, 5 * 60 * 1000);
+window.setInterval(() => {
+  loadPolicies();
+  loadMonitorState();
+}, 5 * 60 * 1000);

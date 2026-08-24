@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="亚太人力资源政策新旧对比与官方来源核验">
   <title>Policy Delta｜亚太 HR 政策对比</title>
-  <link rel="stylesheet" href="./styles.css?v=1.0.1">
+  <link rel="stylesheet" href="./styles.css?v=1.1.0">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
@@ -27,7 +27,7 @@
   <main id="main-content">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="eyebrow">官方原文为准 · AI 辅助比对 · 证据可追溯</p>
+        <p class="eyebrow">官方原文为准 · 每周官网监测 · 人工确认发布</p>
         <h1 id="page-title">先看变化，<br><span>再决定行动。</span></h1>
         <p class="hero-intro">将新规与旧规并排呈现，帮助跨境 HR 快速识别成本、薪资、签证与用工流程中的真实变化。</p>
       </div>
@@ -36,13 +36,13 @@
           <span class="shield-icon" aria-hidden="true">✓</span>
           <div>
             <strong>核验优先</strong>
-            <span>未通过检查的 AI 结果不会进入正式政策库</span>
+            <span>机器监测不替代人工政策核验</span>
           </div>
         </div>
         <ol>
-          <li><span>01</span>定时抓取白名单内的政府官网</li>
-          <li><span>02</span>AI 只做结构化提取与差异识别</li>
-          <li><span>03</span>原文引证、日期和域名自动复核</li>
+          <li><span>01</span>每周检查白名单内的政府官网</li>
+          <li><span>02</span>用内容哈希识别页面是否变化</li>
+          <li><span>03</span>发现变化后提醒人工核对发布</li>
         </ol>
       </aside>
     </section>
@@ -67,9 +67,15 @@
             <span>覆盖法域</span>
             <strong id="metric-regions">—</strong>
           </article>
-          <article class="metric-wide">
-            <span>数据库最近核验</span>
-            <strong id="metric-verified">—</strong>
+          <article class="metric-wide metric-dates">
+            <div>
+              <span>内容人工核验</span>
+              <strong id="metric-verified">—</strong>
+            </div>
+            <div>
+              <span>官网最近检查</span>
+              <strong id="metric-monitored">—</strong>
+            </div>
           </article>
         </div>
 
@@ -115,35 +121,35 @@
 
       <section id="method-view" class="method-view" role="tabpanel" aria-labelledby="method-tab" hidden>
         <header>
-          <p class="eyebrow">FAIL-CLOSED WORKFLOW</p>
-          <h2>自动发现，谨慎发布</h2>
-          <p>时效性来自定时监测；准确性来自官方白名单、逐字证据和失败即停止的发布门槛。</p>
+          <p class="eyebrow">HUMAN-VERIFIED WORKFLOW</p>
+          <h2>自动发现，人工确认</h2>
+          <p>时效性来自每周官网监测；准确性来自官方白名单和人工复核。页面变化不会直接改写政策库。</p>
         </header>
         <div class="method-grid">
           <article>
             <span>1</span>
             <h3>官方源监测</h3>
-            <p>每 12 小时抓取配置好的政府或法定机构页面，通过内容哈希识别变化。</p>
+            <p>每周一检查配置好的政府或法定机构页面，并记录本次检查时间。</p>
           </article>
           <article>
             <span>2</span>
-            <h3>AI 结构化提取</h3>
-            <p>服务端调用 Responses API，将新旧规则、日期、影响和证据提取为固定 JSON 结构。</p>
+            <h3>页面变化识别</h3>
+            <p>对规范化后的官网正文计算内容哈希，与上一次成功检查结果进行比较。</p>
           </article>
           <article>
             <span>3</span>
-            <h3>确定性校验</h3>
-            <p>检查来源域名、HTTPS、日期格式，并确认每条证据逐字存在于抓取到的官方原文中。</p>
+            <h3>GitHub 提醒</h3>
+            <p>如发现官网页面变化，自动创建 Issue，附上官方链接和需要人工确认的监测重点。</p>
           </article>
           <article>
             <span>4</span>
-            <h3>独立复核</h3>
-            <p>第二次 AI 调用以审计者身份复核候选变更；存在歧义时自动进入人工审核队列。</p>
+            <h3>人工核验发布</h3>
+            <p>由人工确认政策正文、数值和生效日期后再更新政策库，网页随后重新部署。</p>
           </article>
         </div>
         <div class="governance-note">
           <strong>发布原则</strong>
-          <p>默认不让 AI 直接改写已发布政策。候选项审核通过后才进入正式数据；如启用无人值守发布，也只放行满足全部硬性校验的变更。</p>
+          <p>“官网最近检查”只表示页面监测已完成；“内容人工核验”才表示已发布政策内容经过确认。两者分开显示，避免把机器检查误认为法律核验。</p>
         </div>
       </section>
     </section>
@@ -155,6 +161,6 @@
   </footer>
 
   <noscript>请启用 JavaScript 以加载政策对比数据。</noscript>
-  <script type="module" src="./app.js?v=1.0.1"></script>
+  <script type="module" src="./app.js?v=1.1.0"></script>
 </body>
 </html>
