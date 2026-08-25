@@ -36,9 +36,12 @@ test("前端包含核心筛选和对比挂载点", async () => {
     readFile(path.join(projectRoot, "index.html"), "utf8"),
     readFile(path.join(projectRoot, "app.js"), "utf8")
   ]);
-  for (const id of ["policy-list", "search-input", "region-filter", "category-filter", "comparison-view", "method-view"]) {
+  for (const id of ["policy-list", "search-input", "region-filter", "category-filter", "comparison-view", "page-title"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
   }
+  assert.match(html, /Policy Data Base/);
+  assert.match(html, /全球新旧/);
+  assert.doesNotMatch(html, /更新与核验|核验优先|id=["']method-view["']/);
   assert.match(js, /textContent/);
   assert.doesNotMatch(js, /\.innerHTML\s*=/);
 });
