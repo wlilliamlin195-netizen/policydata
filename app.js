@@ -5,14 +5,7 @@ const state = {
   region: "ALL",
   category: "ALL",
   verifiedOnly: true,
-  lastVerifiedAt: null,
-  lastCheckedAt: null,
 };
-
-const monitorStateUrls = [
-  "https://raw.githubusercontent.com/wlilliamlin195-netizen/policydata/main/data/monitor-state.json",
-  "./data/monitor-state.json",
-];
 
 const ui = {
   list: document.querySelector("#policy-list"),
@@ -23,7 +16,6 @@ const ui = {
   category: document.querySelector("#category-filter"),
   verified: document.querySelector("#verified-filter"),
   form: document.querySelector("#filter-form"),
-  status: document.querySelector("#header-status-text"),
 };
 
 const dateFormatter = new Intl.DateTimeFormat("zh-CN", {
@@ -37,21 +29,6 @@ function formatDate(value) {
   if (!value) return "日期待官方确认";
   const date = new Date(`${value}T00:00:00Z`);
   return Number.isNaN(date.getTime()) ? value : dateFormatter.format(date);
-}
-
-function formatTimestamp(value) {
-  if (!value) return "暂无记录";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "时间未知";
-  return new Intl.DateTimeFormat("zh-CN", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: "Asia/Shanghai",
-  }).format(date);
 }
 
 function makeElement(tag, className, text) {
@@ -182,30 +159,6 @@ function renderMetrics() {
   document.querySelector("#metric-total").textContent = String(verified.length);
   document.querySelector("#metric-high").textContent = String(verified.filter((item) => item.impactLevel === "high").length);
   document.querySelector("#metric-regions").textContent = String(new Set(verified.map((item) => item.jurisdiction)).size);
-  document.querySelector("#metric-verified").textContent = formatTimestamp(state.lastVerifiedAt);
-  document.querySelector("#metric-monitored").textContent = formatTimestamp(state.lastCheckedAt);
-  ui.status.textContent = state.lastCheckedAt
-    ? `官网检查 · ${formatTimestamp(state.lastCheckedAt)}`
-    : `内容核验 · ${formatTimestamp(state.lastVerifiedAt)}`;
-}
-
-async function loadMonitorState() {
-  for (const url of monitorStateUrls) {
-    try {
-      const separator = url.includes("?") ? "&" : "?";
-      const response = await fetch(`${url}${separator}t=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const monitorState = await response.json();
-      if (!monitorState.lastCheckedAt) throw new Error("缺少 lastCheckedAt");
-      state.lastCheckedAt = monitorState.lastCheckedAt;
-      renderMetrics();
-      return;
-    } catch (error) {
-      console.warn(`无法从 ${url} 读取监测状态`, error);
-    }
-  }
-  state.lastCheckedAt = null;
-  renderMetrics();
 }
 
 function bindEvents() {
@@ -229,19 +182,6 @@ function bindEvents() {
       applyFilters();
     });
   });
-
-  document.querySelectorAll(".view-tab").forEach((button) => {
-    button.addEventListener("click", () => {
-      const view = button.dataset.view;
-      document.querySelectorAll(".view-tab").forEach((tab) => {
-        const active = tab === button;
-        tab.classList.toggle("is-active", active);
-        tab.setAttribute("aria-selected", String(active));
-      });
-      document.querySelector("#comparison-view").hidden = view !== "comparison";
-      document.querySelector("#method-view").hidden = view !== "method";
-    });
-  });
 }
 
 async function loadPolicies() {
@@ -249,7 +189,6 @@ async function loadPolicies() {
     const response = await fetch("./data/policies.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const database = await response.json();
-    state.lastVerifiedAt = database.lastVerifiedAt;
     state.policies = database.policies
       .slice()
       .sort((a, b) => b.effectiveDate.localeCompare(a.effectiveDate));
@@ -262,7 +201,6 @@ async function loadPolicies() {
     renderMetrics();
     applyFilters();
   } catch (error) {
-    ui.status.textContent = "数据加载失败";
     ui.resultsCount.textContent = "无法读取政策数据";
     const message = makeElement("div", "error-state");
     message.append(makeElement("strong", "", "政策数据加载失败"), makeElement("p", "", "请通过本项目自带的本地服务器访问，或检查 data/policies.json 是否存在。"));
@@ -273,10 +211,8 @@ async function loadPolicies() {
 
 bindEvents();
 loadPolicies();
-loadMonitorState();
 
 // 长时间打开页面时自动读取最新的已发布数据。
 window.setInterval(() => {
   loadPolicies();
-  loadMonitorState();
 }, 5 * 60 * 1000);
