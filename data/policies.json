@@ -104,8 +104,10 @@
       "topic": "都道府县地区最低工资",
       "title": "日本地区最低工资全国加权平均升至 1,121 日元",
       "effectiveDate": "2025-10-01",
+      "effectiveDateLabel": "分批生效",
+      "effectiveDateDisplay": "2025-10-01 至 2026-03-31",
       "oldRule": "2024 年度地区最低工资全国加权平均为 1,055 日元/小时，各地适用额与生效日不同。",
-      "newRule": "2025 年度全国加权平均为 1,121 日元/小时，47 个都道府县均超过 1,000 日元；具体金额按工作地查询。",
+      "newRule": "2025 年度全国加权平均为 1,121 日元/小时，47 个都道府县均超过 1,000 日元；各地自 2025 年 10 月 1 日至 2026 年 3 月 31 日分批生效，具体金额按工作地查询。",
       "deltaSummary": "全国加权平均增加 66 日元；不能用全国平均替代员工工作地的法定最低工资。",
       "impactLevel": "high",
       "hrActions": [
@@ -115,14 +117,20 @@
       ],
       "verification": {
         "status": "verified",
-        "verifiedAt": "2026-08-18T09:00:00+08:00",
+        "verifiedAt": "2026-08-31T15:20:00+08:00",
         "method": "official-source-and-exact-evidence",
         "sources": [
           {
             "title": "地域別最低賃金の全国一覧",
             "authority": "日本厚生劳动省",
             "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/index.html",
-            "excerpt": "令和７年度全国加重平均時間額：1,121円（前年度比6.26％上昇）"
+            "excerpt": "令和7年度全国加重平均为1,121日元，较上年度1,055日元增加66日元。"
+          },
+          {
+            "title": "全ての都道府県で地域別最低賃金の答申がなされました",
+            "authority": "日本厚生劳动省",
+            "url": "https://www.mhlw.go.jp/stf/newpage_63030.html",
+            "excerpt": "各地最低工资预计在2025年10月1日至2026年3月31日期间依次生效。"
           }
         ]
       }
