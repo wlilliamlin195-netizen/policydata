@@ -74,7 +74,10 @@ function buildPolicyCard(policy) {
   titleArea.append(meta, title, subtitle);
 
   const date = makeElement("div", "effective-date");
-  date.append(makeElement("span", "", "生效日期"), makeElement("strong", "", formatDate(policy.effectiveDate)));
+  date.append(
+    makeElement("span", "", policy.effectiveDateLabel || "生效日期"),
+    makeElement("strong", "", policy.effectiveDateDisplay || formatDate(policy.effectiveDate)),
+  );
   header.append(titleArea, date);
 
   const comparison = makeElement("div", "comparison-grid");
