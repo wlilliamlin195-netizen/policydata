@@ -31,6 +31,16 @@ test("所有启用监测源都指向现有政策和 HTTPS 白名单", async () =
   }
 });
 
+test("日本最低工资明确标注分批生效区间", async () => {
+  const database = await readJson("data/policies.json");
+  const policy = database.policies.find((item) => item.id === "jp-regional-minimum-wage-2025");
+  assert(policy);
+  assert.equal(policy.effectiveDateLabel, "分批生效");
+  assert.equal(policy.effectiveDateDisplay, "2025-10-01 至 2026-03-31");
+  assert.match(policy.newRule, /2025 年 10 月 1 日至 2026 年 3 月 31 日/);
+  assert.equal(policy.verification.sources.length, 2);
+});
+
 test("前端包含核心筛选和对比挂载点", async () => {
   const [html, js] = await Promise.all([
     readFile(path.join(projectRoot, "index.html"), "utf8"),
