@@ -1,6 +1,6 @@
 # 官方政策来源每周检查
 
-检查时间：2026-08-31T07:18:27.285Z
+检查时间：2026-09-07T01:28:39.243Z
 
 - 发现变化：1
 - 首次建立基准：0
@@ -11,8 +11,8 @@
 
 ### 日本厚生劳动省
 
-监测重点：年度、都道府县最低工资、全国加权平均与具体生效日期
+监测重点：育儿期灵活工作措施、雇主义务、员工年龄范围和生效日期
 
-- [打开官方来源](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/index.html)
+- [打开官方来源](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000130583.html)
 
 > 提醒：这里只能确认官网页面内容发生变化，不能自动判断政策是否已经正式修改。请核对官方正文后再更新网站。
