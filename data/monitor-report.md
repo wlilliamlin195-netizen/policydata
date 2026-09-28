@@ -1,26 +1,8 @@
 # 官方政策来源每周检查
 
-检查时间：2026-09-21T01:29:37.290Z
+检查时间：2026-09-28T07:00:24.221Z
 
-- 发现变化：2
+- 发现变化：0
 - 首次建立基准：0
-- 内容未变化：6
+- 内容未变化：8
 - 抓取失败：0
-
-## 需要人工核对
-
-### Australian Department of Home Affairs
-
-监测重点：SID/TSS 制度、生效日期、过渡安排与申请条件
-
-- [打开官方来源](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/repealed-visas/temporary-skill-shortage-medium-term-visa-subclass-482)
-
-> 提醒：这里只能确认官网页面内容发生变化，不能自动判断政策是否已经正式修改。请核对官方正文后再更新网站。
-
-### 日本厚生劳动省
-
-监测重点：育儿期灵活工作措施、雇主义务、员工年龄范围和生效日期
-
-- [打开官方来源](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000130583.html)
-
-> 提醒：这里只能确认官网页面内容发生变化，不能自动判断政策是否已经正式修改。请核对官方正文后再更新网站。
