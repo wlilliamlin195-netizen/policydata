@@ -1,45 +1,45 @@
 {
   "schemaVersion": 1,
-  "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+  "lastCheckedAt": "2026-10-19T06:16:41.990Z",
   "sources": {
     "hk-minimum-wage": {
       "contentHash": "35b01c6c7a9e9a8c9babfdd75d788881e1aebcb07eaf0f56f65a755f5fcad4c6",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "unchanged"
     },
     "tw-minimum-wage": {
       "contentHash": "413591ee2fe0b45080c7811299b92b867889a715fdd20acc5fc11389d2f7e9a7",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "unchanged"
     },
     "kr-minimum-wage": {
       "contentHash": "9cec7ec0428159120083268d185f49c312a454bb7fce1309ec5836ae6ff3b512",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "unchanged"
     },
     "jp-regional-minimum-wage": {
-      "contentHash": "014b9028f6d5ba46e10f1444cebca6d95575db70921af1f1f25e8d1c482ba56c",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "contentHash": "07430a53a9dfb852d663c7d837be3c9571ed0922c4c1caf5986694d7876452b2",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "changed-needs-review"
     },
     "au-super-guarantee": {
       "contentHash": "1430d94b40673b1e92cd85cf31c6f29d20d4ae7459c7ab8fbb5d8c601484f920",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "unchanged"
     },
     "au-skills-in-demand": {
       "contentHash": "1afa7d744b05c3d34d963b504d6fb98df36bee0ebd05ff5be211bff0de8cf12c",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "unchanged"
     },
     "hk-mpf-offsetting": {
-      "contentHash": "42c2666cfcb96e78df0f3050536ca4ca32b96d454dd9d478b66d1e42a5d46a48",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
-      "status": "unchanged"
+      "contentHash": "4e4578e827cc4b9f58681bf4e04a22484513c422e2036d8cb03a690284d39de4",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
+      "status": "changed-needs-review"
     },
     "jp-childcare-flexible-work": {
-      "contentHash": "9be8d5d935ef686ad1da3e609be9ca37770bd256f4aa46047ef3987f6cb5243e",
-      "lastCheckedAt": "2026-10-12T07:25:55.232Z",
+      "contentHash": "90f9f74448e10effef29d3f8abce703c089084b0770831adde2b372d10154e4c",
+      "lastCheckedAt": "2026-10-19T06:16:41.990Z",
       "status": "changed-needs-review"
     }
   }
